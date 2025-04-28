@@ -6,6 +6,8 @@ describe('Amplify.com', () => {
         await StartPage.open()
 
         await expect($('.icon.icon--logo').toBeVisible())
+        await $('#op_amplify_ckla').click();
+        //TO DO assert that we are on the expected page via new url
 
     })
 })
