@@ -10,8 +10,12 @@ describe('Amplify.com: the user should go to ', () => {
 
     it('the Our Programs section of the page, click on the CKLA square and check that the link is correct', async () => {
         await $('#op_amplify_ckla').click();
-        //TO DO assert that we are on the expected page via new url
-
+    //TO DO assert that we are on the expected page via new url
     })
+
+    it('CLick sends to new new Url', async () => {
+        await expect(StartPage.getUrlPath().includes('/programs/amplify-core-knowledge-language-arts/'));
+        console.log(StartPage.getUrlPath());
+        })
 })
 
