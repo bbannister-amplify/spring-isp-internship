@@ -13,5 +13,10 @@ describe('Amplify.com', () => {
         await expect(pageTitle).toContain('Amplify services')
 
     })
+
+    it('Returns back to home page by clicking logo', async () => {
+        await $('.icon.icon--logo').click();
+        await expect(ServicesPage.getUrlPath().includes(''));
+    })
 })
 
