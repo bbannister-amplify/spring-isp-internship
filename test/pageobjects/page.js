@@ -1,5 +1,6 @@
 import { browser } from '@wdio/globals'
 import { createRequire } from 'module';
+import { stringify } from 'querystring';
 const require = createRequire(import.meta.url);
 /**
 * main page object containing all methods, selectors and functionality
@@ -14,14 +15,8 @@ export default class Page {
         return browser.url(`https://www.amplify.com/${path}`)
     }
 
-    getUrlPath() {
-        const http = require('http');
-        const url = require('url');
-        http.createServer(function (req,res) {
-        const parseUrl= url.parse(req.url,true);
-        res.end();
-        return parseUrl;
-        })
-        return "no url";
+    getCurrentUrl() {
+        var currentUrl = browser.getUrl();
+        return stringify.apply(currentUrl);
     }
 }

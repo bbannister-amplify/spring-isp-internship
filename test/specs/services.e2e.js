@@ -16,7 +16,7 @@ describe('Amplify.com', () => {
 
     it('Returns back to home page by clicking logo', async () => {
         await $('.icon.icon--logo').click();
-        await expect(ServicesPage.getUrlPath().includes(''));
+        await expect(ServicesPage.getCurrentUrl().includes(''));
     })
 })
 
