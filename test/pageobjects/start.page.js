@@ -8,6 +8,11 @@ class StartPage extends Page {
 
     open () {
         return super.open('');
+    } 
+
+    acceptCookies () {
+        if ($('#augusta-ButtonElement--hKAdB82mq8CHpx8qWQKA').isDisplayed()) {
+        return $('#augusta-ButtonElement--hKAdB82mq8CHpx8qWQKA').click(); }
     }
 }
 
